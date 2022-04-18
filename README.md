@@ -1,4 +1,10 @@
-# Gitapp
+# Git API
+## by Sandra Dindi
+## Description
+
+This Application enables users to search for profiles of Github accounts by keying in the username on the input section.
+
+## Technologies Used
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.1.
 
