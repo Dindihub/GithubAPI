@@ -1,25 +1,29 @@
 import { Injectable } from '@angular/core';
 import { User } from './user';
-import { HttpClient} from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment.prod';
 import { Userinterface } from './userinterface';
+import { lastValueFrom } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UserService {
-  foundUser:User;
+  user: User;
 
   constructor(private http: HttpClient) {
-    this.foundUser = new User("","",0,0,0,"",new Date);
-    
-
-
-    
+    this.user = new User('', '', 0, 0, '','', new Date());
   }
 
-
-
-
+  async getUser(username: string) {
+    const searchUser = this.http.get<User>(
+      `${environment.apiurl}/users/${username}`
+    );
+    return await lastValueFrom(searchUser).then((result) => {
+      console.log(result);
+      return result
+    });
+  }
 }
 
+// https://api.github.com/users/Dindihub

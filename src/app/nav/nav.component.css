@@ -1,29 +1,8 @@
-.input{
-    width:50%;
-    height:40px;
-    margin-left:10%;
-    margin-right:1%;
-
-}
-
-.btnuser{
-    background-color: green;
-    color:white;
-    margin-right:1%;
-    width:10%;
-    height:40px;
-    border-radius: 50%;  
-}
-
-.btnrepo{
-    background-color:blueviolet;
-    color:white;
-    width:10%;
-    height:40px;
-    border-radius: 50%;  
-}
 
 img{
     width:5%;
     height: auto;
+    margin-top:0;
+    margin-left:0;
 }
+

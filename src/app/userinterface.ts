@@ -1,9 +1,8 @@
 export interface Userinterface {
     login:string,
     location:string,
-    repos:number,
-    followers:number,
-    following:number,
-    avator:any
+    followers_url:number,
+    following_url:number,
+    avatar_url:any
     created:Date
 }

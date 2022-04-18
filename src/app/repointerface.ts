@@ -1,8 +1,6 @@
 export interface Repointerface {
-    name:string,
-    url:string,
-    description:string,
-    forks:number,
+    repos_url:string,
+    subscriptions_url:string,
     created:Date
 
 }

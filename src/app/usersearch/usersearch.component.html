@@ -1,1 +1,45 @@
-<p>usersearch works!</p>
+
+
+<form (ngSubmit)="onSubmit(username)">
+  <input
+    type="text"
+    class="input"
+    name="username"
+    [(ngModel)]="username"
+    placeholder="Search for users or repositories...."
+  />
+
+  <button
+    class="btnuser"
+    routerLink="usersearch"
+    [disabled]="username.length < 2"
+  >
+    User Search
+  </button>
+  <!-- <button class="btnrepo"  routerLink="reposearch" [disabled]="username.length<2">Repo Search </button> -->
+</form>
+
+<div *ngIf="username" class="container">
+  <div class="user-details">
+   <span>Name: {{ user.login }}</span>  <span> Location: {{ user.location }} </span>
+    <span> Followers: {{ user.followers }} </span>
+    <span>Following: {{ user.following }} </span>
+    <div class="panel-body">
+      <div>
+        <img src="{{ user.avatar_url }}" alt="" />
+      </div><hr>
+      <div>Bio: {{user.bio}}</div><hr>
+      <div>Created at: {{ user.created }}</div>
+    </div>
+  </div>
+<div class="repo-details" *ngIf="username">
+    <h3>Repositories</h3><hr>
+<p> Public Repos: {{user.public_repos}}</p>
+<hr>
+<p> Public Gists: {{user.public_gists}}</p>
+<hr>
+<p> Repos: {{user.repos_url}}</p><hr>
+
+</div>
+
+</div>

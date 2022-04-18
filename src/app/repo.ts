@@ -1,5 +1,5 @@
 export class Repo {
-    constructor(public name:string,public url:string ,public description:string, public forks:number,public created:Date
+    constructor(public  public_repos:number ,public public_gists:number, public repos_url:string,public created:Date
          ){
       }
     }
