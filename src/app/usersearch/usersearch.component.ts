@@ -11,7 +11,7 @@ import { RepoService } from '../repo.service';
 export class UsersearchComponent implements OnInit {
   username: string = '';
   user: any;
-  repo: any;
+  repos: any;
   constructor(
     private userService: UserService,
     private reposervice: RepoService
@@ -21,14 +21,17 @@ export class UsersearchComponent implements OnInit {
     this.userService.getUser(username).then((result) => {
       this.user = result;
     });
+
+    this.repoSearch(username)
   }
-  Submit(username: string) {
+  repoSearch(username: string) {
     this.reposervice.getRepo(username).then((result) => {
-      this.repo = result;
+      this.repos = result;
     });
   }
   ngOnInit(): void {
-    // this.user.login=this.myService.searchUser('')
+    this.onSubmit("Dindihub")
+    console.log("new")
   }
 }
 

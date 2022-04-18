@@ -12,7 +12,7 @@ export class UserService {
   user: User;
 
   constructor(private http: HttpClient) {
-    this.user = new User('', '', 0, 0, '','', new Date());
+    this.user = new User('','', '', 0, 0, '','', new Date());
   }
 
   async getUser(username: string) {

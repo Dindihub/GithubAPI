@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,Input} from '@angular/core';
 import { RepoService } from '../repo.service'; 
 
 @Component({
@@ -7,15 +7,22 @@ import { RepoService } from '../repo.service';
   styleUrls: ['./reposearch.component.css'],
 })
 export class ReposearchComponent implements OnInit {
-  username: string = '';
-  repo: any;
+  
+  repos: any;
+  @Input() newUsername:string=''
   constructor(private reposervice: RepoService) {}
 
-  onSubmit(username: string) {
-    this.reposervice.getRepo(username).then((result) => {
-      this.repo = result;
+  repoSearch() {
+    this.reposervice.getRepo(this.newUsername).then((result) => {
+      this.repos = result;
     });
+
+    console.log(this.newUsername)
+    console.log("this.newUsername");
   }
 
-  ngOnInit(): void {}
+
+  ngOnInit(): void {
+    this.repoSearch()
+  }
 }

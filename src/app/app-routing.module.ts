@@ -8,8 +8,8 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {path:"reposearch",component:ReposearchComponent},
-  {path:"usersearch",component:UsersearchComponent},
-  {path:"" ,component:HomepageComponent},
+  {path:"",component:UsersearchComponent},
+  {path:"home" ,component:HomepageComponent},
   {path:"nav",component:NavComponent}
 
 ];

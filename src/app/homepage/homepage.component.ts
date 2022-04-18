@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Output,EventEmitter } from '@angular/core';
 import { UserService } from '../user.service';
 
 @Component({
@@ -7,11 +7,12 @@ import { UserService } from '../user.service';
   styleUrls: ['./homepage.component.css'],
 })
 export class HomepageComponent implements OnInit {
-  username: string = '';
+  @Output() username:EventEmitter<any>=new EventEmitter();
   user: any;
   constructor(private userService: UserService) {}
 
   onSubmit(username: string) {
+    this.username.emit(username)
     this.userService.getUser(username).then((result) => {
       this.user = result;
     });

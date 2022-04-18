@@ -15,35 +15,57 @@
     border-radius: 50%;  
 }
 
-.btnrepo{
-    background-color:blueviolet;
-    color:white;
-    width:10%;
-    height:40px;
-    border-radius: 50%;  
-}
 
 form{
-    margin-top:30px;
+    margin-top:10px;
 }
-
-.container{
+.container-all{
     display:flex;
-    margin-top:2%;
-    margin-left:15%;
-
+}
+.container{
+    margin-left:10%;
+    width:500px;
+    margin-right:5%;
 }
 .user-details{
     margin-left: 3%;
     padding: 3%;
 }
 
-.repo-details{
-    margin-left:5%;
-    padding:3%;
-}
-
 img{
     border-radius:50%;
     padding:5%;
+}
+a{
+    color:white;
+    text-decoration: none;
+}
+
+button{
+    color:white;
+    background-color: green;
+    margin:1%;
+}
+
+/* repo styling start */
+
+h2{
+    text-align: center;
+}
+.repo-container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width:1000px;
+    margin-top:5%;
+}
+
+.repo-card{
+    width:30%;
+    background-color: aquamarine;
+    border-radius: 4px;
+    box-shadow: 0 0 4px 1px rgba(255, 255, 255, 0.78);
+    color:black;
+    margin:15px 10px;
 }
