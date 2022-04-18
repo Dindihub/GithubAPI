@@ -40,9 +40,9 @@
           <img src="{{ user.avatar_url }}" alt="" />
         </div>
         <hr />
-        <div>Bio: {{ user.bio }}</div>
+        <div appHover >Bio: {{ user.bio }}</div>
         <hr />
-        <div>Created at: {{ user.created_at }}</div>
+        <div>Created at: {{ user.created_at | date:"medium"}}</div>
       </div>
       <hr />
       <p>Public Repos: {{ user.public_repos }}</p>

@@ -11,6 +11,7 @@ import { ReposearchComponent } from './reposearch/reposearch.component';
 import { UserService } from './user.service';
 import { RepoService } from './repo.service';
 import { AppRoutingModule,routingComponents} from './app-routing.module';
+import { HoverDirective } from './hover.directive';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { AppRoutingModule,routingComponents} from './app-routing.module';
     routingComponents,
     UsersearchComponent,
     ReposearchComponent,
+    HoverDirective,
 
   ],
   imports: [
