@@ -6,9 +6,6 @@ import { Directive,ElementRef,OnInit,HostListener } from '@angular/core';
 export class HoverDirective implements OnInit {
   constructor(public toChange: ElementRef) {}
 
-  ngOnInit(): void {
-    // this.nowHover.nativeElement.style.backgroundColor="orange"
-  }
   @HostListener('mouseenter') mouseEnter() {
     this.changeColor('purple');
   }
@@ -18,6 +15,10 @@ export class HoverDirective implements OnInit {
   }
   changeColor(color: string) {
     this.toChange.nativeElement.style.backgroundColor = 'color';
+  }
+
+  ngOnInit(): void {
+    // this.nowHover.nativeElement.style.backgroundColor="orange"
   }
 }
 
