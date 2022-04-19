@@ -1,5 +1,5 @@
 <form (ngSubmit)="onSubmit(username)">
-  <input
+  <input appHover
     type="text"
     class="input"
     name="username"
@@ -11,7 +11,7 @@
     class="btnuser"
     routerLink="usersearch"
     [disabled]="username.length < 2"
-  appHover>
+  >
   Search User
   </button>
   <!-- <button class="btnrepo"  routerLink="reposearch" [disabled]="username.length<2">Repo Search </button> -->
